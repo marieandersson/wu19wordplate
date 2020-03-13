@@ -16,6 +16,10 @@ add_action('after_setup_theme', function () {
 // Hide admin bar on the front end
 add_filter('show_admin_bar', '__return_false');
 
+// add_filter('the_title', function( $title ) {
+//     return '<strong>' . $title . '</strong>';
+// });
+
 // Enqueue styles and scripts the right way.
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');

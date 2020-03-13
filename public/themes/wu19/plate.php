@@ -51,7 +51,7 @@ add_theme_support('plate-disable-toolbar', [
 add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
-add_theme_support('plate-login-logo', get_theme_file_uri('assets/images/logo.png'));
+add_theme_support('plate-login-logo', get_theme_file_uri('assets/images/logo.svg'));
 
 // Set custom footer text.
 add_theme_support('plate-footer-text', 'Thank you for creating with the web developer class of 2019.');
