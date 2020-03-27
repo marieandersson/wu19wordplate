@@ -16,10 +16,6 @@ add_action('after_setup_theme', function () {
 // Hide admin bar on the front end
 add_filter('show_admin_bar', '__return_false');
 
-// add_filter('the_title', function( $title ) {
-//     return '<strong>' . $title . '</strong>';
-// });
-
 // Enqueue styles and scripts the right way.
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');
@@ -28,7 +24,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', '', '', true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
-    // wp_enqueue_style( 'style', get_stylesheet_uri() );
 
     wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/assets/styles/app.css');
     wp_enqueue_script('script', get_stylesheet_directory_uri().'/assets/scripts/app.js');

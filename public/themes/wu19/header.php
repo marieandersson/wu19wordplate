@@ -12,17 +12,16 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav mr-auto">
-            <?php foreach (get_pages([ 'sort_column' => 'menu_order']) as $page): ?>
-                <li class="nav-item <?php if (is_home() && $page->ID == get_option('page_for_posts') || is_page($page->ID)) { echo 'active'; } ?>">
-                    <a class="nav-link" href="<?php echo get_permalink($page); ?>">
-                        <?php echo $page->post_title; ?>
+            <?php foreach (wp_get_nav_menu_items('main-menu') as $page): ?>
+                <li class="nav-item <?php if (is_home() && $page->object_id == get_option('page_for_posts') || is_page($page->object_id)) { echo 'active'; } ?>">
+                    <a class="nav-link" href="<?php echo $page->url; ?>">
+                        <?php echo $page->title; ?>
                     </a><!-- /nav-link -->
                 </li><!-- /nav-item -->
             <?php endforeach; ?>
