@@ -16,7 +16,8 @@
         "wordplate/plate": "^6.0",
         "wpackagist-plugin/autodescription": "^4.0",
         "wpackagist-plugin/hide-updates": "^1.1",
-        "wpackagist-plugin/ninja-forms": "3.4.24.1"
+        "wpackagist-plugin/ninja-forms": "3.4.24.1",
+        "wpackagist-plugin/wp-event-manager": "^3.1"
     },
     "config": {
         "optimize-autoloader": true,
