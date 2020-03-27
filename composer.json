@@ -14,6 +14,7 @@
         "roots/soil": "^3.9",
         "wordplate/framework": "^8.0",
         "wordplate/plate": "^6.0",
+        "wpackagist-plugin/autodescription": "^4.0",
         "wpackagist-plugin/hide-updates": "^1.1",
         "wpackagist-plugin/ninja-forms": "3.4.24.1"
     },
