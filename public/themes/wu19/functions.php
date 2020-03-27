@@ -25,11 +25,15 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
 
+    // Enque compiled assets
     wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/assets/styles/app.css');
     wp_enqueue_script('script', get_stylesheet_directory_uri().'/assets/scripts/app.js');
 });
 
 require get_template_directory().'/post-types/student.php';
+require get_template_directory().'/post-types/project.php';
 require get_template_directory().'/taxonomies/skill.php';
+require get_template_directory().'/taxonomies/tool.php';
 require get_template_directory().'/fields/student.php';
+require get_template_directory().'/fields/project.php';
 require get_template_directory().'/plate.php';
